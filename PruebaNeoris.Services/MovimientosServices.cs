@@ -144,10 +144,18 @@ namespace PruebaNeoris.Services
                         Fecha = item.Fecha,
                         Movimiento = item.Valor,
                         NumeroCuenta = item.CuentaId,
-                        SaldoDisponible = item.Cuenta.SaldoInicial - item.Valor,
                         SaldoInicial = item.Cuenta.SaldoInicial,
                         Tipo = item.Cuenta.TipoCuenta
                     };
+                    switch (item.TipoMovimiento)
+                    {
+                        case "retiro":
+                            reporte.SaldoDisponible = item.Cuenta.SaldoInicial - item.Valor;
+                            break;
+                        case "deposito":
+                            reporte.SaldoDisponible = item.Cuenta.SaldoInicial + item.Valor;
+                            break;
+                    }
                     listReportes.Add( reporte );
                 }
                 response.StatusCode = HttpStatusCode.OK.GetHashCode();
