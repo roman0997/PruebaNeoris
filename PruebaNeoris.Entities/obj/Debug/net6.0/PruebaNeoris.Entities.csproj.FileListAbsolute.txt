@@ -1,0 +1,12 @@
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\bin\Debug\net6.0\PruebaNeoris.Entities.deps.json
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\bin\Debug\net6.0\PruebaNeoris.Entities.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\bin\Debug\net6.0\PruebaNeoris.Entities.pdb
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.csproj.AssemblyReference.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.AssemblyInfoInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.AssemblyInfo.cs
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.csproj.CoreCompileInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\refint\PruebaNeoris.Entities.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\PruebaNeoris.Entities.pdb
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Entities\obj\Debug\net6.0\ref\PruebaNeoris.Entities.dll

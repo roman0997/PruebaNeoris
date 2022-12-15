@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PruebaNeoris.Services/1.0.0": {
+        "dependencies": {
+          "PruebaNeoris.Entities": "1.0.0"
+        },
+        "runtime": {
+          "PruebaNeoris.Services.dll": {}
+        }
+      },
+      "PruebaNeoris.Entities/1.0.0": {
+        "runtime": {
+          "PruebaNeoris.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PruebaNeoris.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PruebaNeoris.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

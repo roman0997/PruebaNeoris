@@ -1,0 +1,17 @@
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Repository.deps.json
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Repository.runtimeconfig.json
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Repository.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Repository.pdb
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Entities.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\bin\Debug\net6.0\PruebaNeoris.Entities.pdb
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.csproj.AssemblyReference.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.AssemblyInfoInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.AssemblyInfo.cs
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.csproj.CoreCompileInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.csproj.CopyComplete
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\refint\PruebaNeoris.Repository.dll
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.pdb
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\PruebaNeoris.Repository.genruntimeconfig.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Repository\obj\Debug\net6.0\ref\PruebaNeoris.Repository.dll
