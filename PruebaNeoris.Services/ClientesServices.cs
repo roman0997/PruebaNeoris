@@ -1,14 +1,9 @@
 ﻿using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
 using PruebaNeoris.Entities.Request;
+using PruebaNeoris.Entities.Resources;
 using PruebaNeoris.Entities.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Services
 {
@@ -32,10 +27,10 @@ namespace PruebaNeoris.Services
                 response.StatusCode = HttpStatusCode.OK.GetHashCode();
                 response.Data = clientes;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -57,7 +52,8 @@ namespace PruebaNeoris.Services
                 bool resultPersona = personasRepository.AddPersona(objPersona).Result;
                 if(!resultPersona)
                 {
-                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode().ToString(), "ya existe un usuario registrado con esta identificacion"));
+                    response.StatusCode = HttpStatusCode.BadRequest.GetHashCode();
+                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode(), "ya existe un usuario registrado con esta identificacion"));
                     return response;
                 }
                 Clientes objCliente = new Clientes()
@@ -70,10 +66,10 @@ namespace PruebaNeoris.Services
                 response.StatusCode = result ? HttpStatusCode.OK.GetHashCode() : HttpStatusCode.InternalServerError.GetHashCode();
                 response.Data = result;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -106,8 +102,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -117,14 +113,20 @@ namespace PruebaNeoris.Services
             ApiResponse response = new ApiResponse();
             try
             {
+                Clientes cliente = clientesRepository.GetClienteById(clienteId).Result;
                 bool result = clientesRepository.DeleteCliente(clienteId).Result;
-                response.StatusCode = result ? HttpStatusCode.OK.GetHashCode() : HttpStatusCode.InternalServerError.GetHashCode();
-                response.Data = result;
+                bool resultPersona = false;
+                if(result)
+                {
+                    resultPersona = personasRepository.DeletePersona(cliente.PersonaId).Result;
+                }
+                response.StatusCode = resultPersona ? HttpStatusCode.OK.GetHashCode() : HttpStatusCode.InternalServerError.GetHashCode();
+                response.Data = resultPersona;
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }

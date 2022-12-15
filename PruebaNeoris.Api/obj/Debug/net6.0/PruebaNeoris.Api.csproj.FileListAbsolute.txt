@@ -1,3 +1,10 @@
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.csproj.AssemblyReference.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.AssemblyInfoInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.AssemblyInfo.cs
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.csproj.CoreCompileInputs.cache
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\appsettings.json
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\PruebaNeoris.Api.exe
@@ -62,13 +69,6 @@ C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\PruebaNeoris.Se
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\PruebaNeoris.Entities.pdb
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\PruebaNeoris.Repository.pdb
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\bin\Debug\net6.0\PruebaNeoris.Services.pdb
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.csproj.AssemblyReference.cache
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.AssemblyInfoInputs.cache
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.AssemblyInfo.cs
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.csproj.CoreCompileInputs.cache
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\PruebaNeoris.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\staticwebassets\msbuild.PruebaNeoris.Api.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.PruebaNeoris.Api.props
 C:\Prueba Tecnica\PruebaNeoris\PruebaNeoris.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PruebaNeoris.Api.props

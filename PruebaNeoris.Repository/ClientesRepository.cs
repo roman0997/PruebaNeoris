@@ -3,12 +3,6 @@ using Microsoft.Extensions.Configuration;
 using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
 using PruebaNeoris.Repository.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Repository
 {
@@ -26,7 +20,7 @@ namespace PruebaNeoris.Repository
 
         public async Task<List<Clientes>> GetClientes()
         {
-            return await this.db.Clientes.ToListAsync();
+            return await this.db.Clientes.Include("Persona").ToListAsync();
         }
 
         public async Task<bool> AddCliente(Clientes cliente)
@@ -76,6 +70,11 @@ namespace PruebaNeoris.Repository
                 response = false;
             }
             return response;
+        }
+
+        public async Task<Clientes> GetClienteById(int clienteId)
+        {
+            return await this.db.Clientes.FirstOrDefaultAsync(x => x.ClienteId == clienteId);
         }
     }
 }

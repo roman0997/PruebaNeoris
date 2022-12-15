@@ -2,11 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using PruebaNeoris.Entities.Models;
 using PruebaNeoris.Repository.Context.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Repository.Context
 {

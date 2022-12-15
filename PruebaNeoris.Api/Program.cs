@@ -6,7 +6,6 @@ using PruebaNeoris.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<IPersonasServices, PersonasServices>();
 builder.Services.AddTransient<IClientesServices, ClientesServices>();
 builder.Services.AddTransient<ICuentasServices, CuentasServices>();
 builder.Services.AddTransient<IMovimientosServices, MovimientosServices>();

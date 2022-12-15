@@ -1,12 +1,8 @@
 ﻿using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
+using PruebaNeoris.Entities.Resources;
 using PruebaNeoris.Entities.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Services
 {
@@ -30,8 +26,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -47,8 +43,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -64,8 +60,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -81,8 +77,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }

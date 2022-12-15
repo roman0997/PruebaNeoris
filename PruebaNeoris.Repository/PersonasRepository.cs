@@ -1,14 +1,8 @@
-﻿using Azure.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
 using PruebaNeoris.Repository.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Repository
 {
@@ -26,16 +20,7 @@ namespace PruebaNeoris.Repository
 
         public async Task<List<Personas>> GetPersonas()
         {
-            try
-            {
-                return await this.db.Personas.ToListAsync();
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
-           
+            return await this.db.Personas.ToListAsync();
         }
 
         public async Task<bool> AddPersona(Personas persona)

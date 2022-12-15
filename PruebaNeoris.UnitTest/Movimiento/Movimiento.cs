@@ -4,11 +4,6 @@ using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
 using PruebaNeoris.Entities.Utils.Enums;
 using PruebaNeoris.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.UnitTest.Movimiento
 {

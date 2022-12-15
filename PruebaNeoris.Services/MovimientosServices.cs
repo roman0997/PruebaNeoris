@@ -1,14 +1,10 @@
 ﻿using PruebaNeoris.Entities.Interfaces;
 using PruebaNeoris.Entities.Models;
+using PruebaNeoris.Entities.Resources;
 using PruebaNeoris.Entities.Response;
 using PruebaNeoris.Entities.Utils;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaNeoris.Services
 {
@@ -35,8 +31,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -50,7 +46,8 @@ namespace PruebaNeoris.Services
                 Cuentas cuenta = cuentasRepository.GetCuentaById(movimiento.CuentaId).Result;
                 if(cuenta == null)
                 {
-                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode().ToString(), "No se encontro Numero de cuenta"));
+                    response.StatusCode = HttpStatusCode.BadRequest.GetHashCode();
+                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode(), MessagesResources.CuentaNoExiste));
                     return response;
                 }
                 switch (movimiento.TipoMovimiento.ToLower())
@@ -60,7 +57,8 @@ namespace PruebaNeoris.Services
                             movimiento.Saldo = cuenta.SaldoInicial - movimiento.Valor;
                         else
                         {
-                            response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode().ToString(), "Saldo insuficiente"));
+                            response.StatusCode = HttpStatusCode.BadRequest.GetHashCode();
+                            response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode(), MessagesResources.SaldoNoDisponible));
                             return response;
                         }
                         break;
@@ -68,7 +66,8 @@ namespace PruebaNeoris.Services
                          movimiento.Saldo = cuenta.SaldoInicial + movimiento.Valor;
                         break;
                     default:
-                        response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode().ToString(), "Tipo de movimiento no existe"));
+                        response.StatusCode = HttpStatusCode.BadRequest.GetHashCode();
+                        response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode(), MessagesResources.TipoMovimientoNoExiste));
                         return response;
                 }
                 bool resultcuenta = cuentasRepository.UpdateCuenta(cuenta).Result;
@@ -77,7 +76,8 @@ namespace PruebaNeoris.Services
                     result = movimientosRepository.AddMovimiento(movimiento).Result;
                 else
                 {
-                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode().ToString(), "Error al realizar la transaccion"));
+                    response.StatusCode = HttpStatusCode.BadRequest.GetHashCode();
+                    response.Errors.Add(new Error(HttpStatusCode.BadRequest.GetHashCode(), MessagesResources.ErrorTransaccion));
                 }
                 
                 response.StatusCode = result ? HttpStatusCode.OK.GetHashCode() : HttpStatusCode.InternalServerError.GetHashCode();
@@ -85,8 +85,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -102,8 +102,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -119,8 +119,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
@@ -130,7 +130,7 @@ namespace PruebaNeoris.Services
             ApiResponse response = new ApiResponse();
             try
             {
-                string format = "dd-MM-yyyy";
+                string format = MessagesResources.FormatoFecha;
                 DateTime StartDate = DateTime.ParseExact(startDate,format,CultureInfo.InvariantCulture );
                 DateTime EndDate = DateTime.ParseExact(endDate, format, CultureInfo.InvariantCulture);
                 List<Movimientos> movimientos = movimientosRepository.GetEstadoCuenta(StartDate, EndDate, identificacion).Result;
@@ -155,8 +155,8 @@ namespace PruebaNeoris.Services
             }
             catch (Exception e)
             {
-
-                throw;
+                response.StatusCode = HttpStatusCode.InternalServerError.GetHashCode();
+                response.Errors.Add(new Error(HttpStatusCode.InternalServerError.GetHashCode(), MessagesResources.Error));
             }
             return response;
         }
